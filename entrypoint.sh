@@ -9,4 +9,4 @@ if [ "${GITHUB_EVENT_NAME}" == "release" ]; then
   tag=$(echo $GITHUB_REF | sed 's/refs\/tags\///g')
 fi
 
-echo "::set-output name=tag::$tag"
+echo "tag=$tag" >> $GITHUB_OUTPUT
